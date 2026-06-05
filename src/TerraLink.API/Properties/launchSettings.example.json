@@ -1,0 +1,28 @@
+{
+  "profiles": {
+    "TerraLink.API (SQLite)": {
+  "commandName": "Project",
+      "launchBrowser": true,
+   "launchUrl": "swagger",
+      "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development",
+        "DatabaseProvider": "Sqlite",
+      "DbConnectionString": "Data Source=terralink.db"
+      },
+ "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    },
+    "TerraLink.API (SQL Server)": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+  "ASPNETCORE_ENVIRONMENT": "Development",
+        "DatabaseProvider": "SqlServer",
+    "DbConnectionString": "Server=localhost;Database=TerraLinkDB;Integrated Security=true;TrustServerCertificate=true"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+using ErrorOr;
+using LowCodeHub.MinimalEndpoints.Abstractions;
+using LowCodeHub.ObjectMapper;
+using LowCodeHub.QueryableExtensions.Abstractions;
+using LowCodeHub.QueryableExtensions.Models;
+using TerraLink.Domain.Entities;
+using TerraLink.Domain.Interfaces.Services;
+using TerraLink.UseCase.Asset.Features.Buildings.Endpoints;
+using TerraLink.UseCase.Asset.Features.Buildings.Specifications;
+using static TerraLink.Domain.Constants.Constant;
+
+namespace TerraLink.UseCase.Asset.Features.Buildings.Operations;
+
+public sealed partial class GetBuildingsOperation
+{
+    public sealed record Request(GetBuildingsEndpoint.Request Payload) : IOperationRequest<PagedList<Response>>;
+}

@@ -1,0 +1,24 @@
+{
+  "_comment": "Snapshot of latest LowCodeHub.* versions.",
+  "source": "https://www.nuget.org/profiles/A.Abuelnour",
+  "lastSyncedUtc": null,
+  "packages": {
+    "LowCodeHub.Jobs": { "latest": "0.0.1", "source": "local-csproj" },
+    "LowCodeHub.Idempotency": { "latest": "0.0.2", "source": "local-csproj" },
+    "LowCodeHub.InboxOutbox": { "latest": "0.0.2", "source": "local-csproj" },
+    "LowCodeHub.Keycloak.Authentication.JwtBearer": { "latest": "0.0.1", "source": "local-csproj" },
+    "LowCodeHub.Keycloak.Client": { "latest": "0.0.2", "source": "local-csproj" },
+    "LowCodeHub.Logging": { "latest": "0.0.2", "source": "local-csproj" },
+    "LowCodeHub.Migration.PostgreSql": { "latest": "0.0.2", "source": "local-csproj" },
+    "LowCodeHub.Migration.SqlServer": { "latest": "0.0.2", "source": "local-csproj" },
+    "LowCodeHub.MinimalEndpoints": { "latest": "0.0.4", "source": "local-csproj" },
+    "LowCodeHub.ObjectMapper": { "latest": "0.0.8", "source": "local-csproj" },
+    "LowCodeHub.OpenApi": { "latest": "0.0.1", "source": "local-csproj" },
+    "LowCodeHub.OTP": { "latest": "0.0.1", "source": "local-csproj" },
+    "LowCodeHub.Permissions": { "latest": "0.0.1", "source": "local-csproj" },
+    "LowCodeHub.QueryableExtensions": { "latest": "0.2.0", "source": "local-csproj" },
+    "LowCodeHub.RabbitMQ": { "latest": "0.0.2", "source": "local-csproj" },
+    "LowCodeHub.SSE": { "latest": "0.0.2", "source": "local-csproj" },
+    "LowCodeHub.Webhooks": { "latest": "0.0.4", "source": "local-csproj" }
+  }
+}

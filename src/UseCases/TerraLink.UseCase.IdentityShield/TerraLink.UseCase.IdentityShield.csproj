@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.8" />
+		<PackageReference Include="LowCodeHub.MinimalEndpoints" Version="0.0.6" />
+		<PackageReference Include="LowCodeHub.OpenApi" Version="0.0.2" />
+		<PackageReference Include="LowCodeHub.Permissions" Version="0.0.2" />
+		<PackageReference Include="LowCodeHub.ObjectMapper" Version="0.0.9" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\TerraLink.Domain\TerraLink.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

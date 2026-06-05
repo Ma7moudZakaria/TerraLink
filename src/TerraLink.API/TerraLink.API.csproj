@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>b0f98f6e-39ac-4add-8971-5a6e1f3333fe</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <InterceptorsNamespaces>$(InterceptorsNamespaces);Microsoft.AspNetCore.OpenApi.Generated</InterceptorsNamespaces>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Text.Json.Serialization.RespectNullableAnnotationsDefault" Value="true" />
+    <RuntimeHostConfigurationOption Include="System.Text.Json.Serialization.RespectRequiredConstructorParametersDefault" Value="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\launchSettings.example.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0" />
+    <PackageReference Include="LowCodeHub.Logging" Version="0.0.4" />
+    <PackageReference Include="LowCodeHub.Migration.SqlServer" Version="0.0.3" />
+    <PackageReference Include="LowCodeHub.MinimalEndpoints" Version="0.0.6" />
+    <PackageReference Include="LowCodeHub.Permissions" Version="0.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="10.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TerraLink.Domain\TerraLink.Domain.csproj" />
+    <ProjectReference Include="..\TerraLink.Migration\TerraLink.Migration.csproj" />
+    <ProjectReference Include="..\UseCases\TerraLink.UseCase.Asset\TerraLink.UseCase.Asset.csproj" />
+    <ProjectReference Include="..\UseCases\TerraLink.UseCase.Dashboard\TerraLink.UseCase.Dashboard.csproj" />
+    <ProjectReference Include="..\UseCases\TerraLink.UseCase.Document\TerraLink.UseCase.Document.csproj" />
+    <ProjectReference Include="..\UseCases\TerraLink.UseCase.Finance\TerraLink.UseCase.Finance.csproj" />
+    <ProjectReference Include="..\UseCases\TerraLink.UseCase.IdentityShield\TerraLink.UseCase.IdentityShield.csproj" />
+    <ProjectReference Include="..\UseCases\TerraLink.UseCase.Lookup\TerraLink.UseCase.Lookup.csproj" />
+    <ProjectReference Include="..\UseCases\TerraLink.UseCase.Report\TerraLink.UseCase.Report.csproj" />
+    <ProjectReference Include="..\UseCases\TerraLink.UseCase.Sales\TerraLink.UseCase.Sales.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\attachments\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,122 @@
+{
+  "name": "CoorB AI Kit",
+  "description": "Project starter standards for AI coding agents.",
+  "downloadNameTemplate": "coorb-ai-kit-{technology}-starter.zip",
+  "generic": {
+    "description": "Standards and tools included with every generated starter.",
+    "standards": [
+      {
+        "id": "adr",
+        "label": "adr-skill",
+        "kind": "workflow",
+        "path": ".agents/skills/adr-skill",
+        "entry": ".agents/skills/adr-skill/SKILL.md",
+        "purpose": "Architecture Decision Record workflow and templates."
+      },
+      {
+        "id": "free-package-licenses",
+        "label": "free-package-licenses",
+        "kind": "policy",
+        "path": ".agents/skills/free-package-licenses",
+        "entry": ".agents/skills/free-package-licenses/SKILL.md",
+        "purpose": "Dependency license policy for any third-party package choice."
+      }
+    ],
+    "toolIds": [
+      "octograph"
+    ]
+  },
+  "technologies": [
+    {
+      "id": "dotnet",
+      "name": ".NET",
+      "description": ".NET 10 Clean Architecture and LowCodeHub package guidance.",
+      "standards": [
+        {
+          "id": "dotnet-arch",
+          "label": "dotnet-arch-skill",
+          "kind": "skill",
+          "path": ".agents/skills/dotnet-arch-skill",
+          "entry": ".agents/skills/dotnet-arch-skill/SKILL.md",
+          "purpose": "Primary .NET 10 Clean Architecture and vertical-slice standards."
+        },
+        {
+          "id": "dotnet-lowcodehub",
+          "label": "dotnet-lowcodehub-skill",
+          "kind": "skill",
+          "path": ".agents/skills/dotnet-lowcodehub-skill",
+          "entry": ".agents/skills/dotnet-lowcodehub-skill/SKILL.md",
+          "purpose": "Routing and hard rules for LowCodeHub packages used by .NET projects."
+        }
+      ],
+      "toolIds": []
+    }
+  ],
+  "tools": [
+    {
+      "id": "octograph",
+      "label": "OctoGraph.Cli",
+      "kind": "cli",
+      "packageId": "OctoGraph.Cli",
+      "version": "0.0.3",
+      "source": "https://www.nuget.org/packages/OctoGraph.Cli",
+      "purpose": "Local code knowledge graph CLI and MCP stdio server.",
+      "installNotes": "OctoGraph.Cli should be installed globally once. The starter can include agent-native project-local MCP config files for selected agents, or you can rely on existing user/HOME MCP config.",
+      "mcpServer": {
+        "serverName": "octograph",
+        "command": "octograph",
+        "args": [
+          "mcp"
+        ]
+      },
+      "manualInstallSteps": [
+        {
+          "title": "Install OctoGraph.Cli globally",
+          "command": "dotnet tool install --global OctoGraph.Cli --version 0.0.3",
+          "description": "Installs the OctoGraph CLI once for the current user."
+        },
+        {
+          "title": "Update OctoGraph.Cli globally",
+          "command": "dotnet tool update --global OctoGraph.Cli --version 0.0.3",
+          "description": "Updates an existing global OctoGraph CLI installation."
+        }
+      ],
+      "setupSteps": [
+        {
+          "title": "Verify the global tool",
+          "command": "octograph --version",
+          "description": "Confirms OctoGraph.Cli is available from the current user's PATH."
+        },
+        {
+          "title": "Build the repository graph",
+          "command": "octograph index .",
+          "description": "Indexes the current repository so agents can ask for graph-backed context."
+        }
+      ],
+      "licenseMetadata": "NuGet metadata for 0.0.3 does not publish a license expression. Treat as explicitly selected by the kit owner until package metadata is updated."
+    }
+  ],
+  "agentTargets": [
+    {
+      "id": "codex",
+      "label": "Codex",
+      "file": "AGENTS.md",
+      "title": "Codex and Generic Agents",
+      "description": "Project instructions for Codex and generic agent runners."
+    },
+    {
+      "id": "claude",
+      "label": "Claude",
+      "file": "CLAUDE.md",
+      "title": "Claude Code",
+      "description": "Claude Code project instructions with the same standards."
+    },
+    {
+      "id": "copilot",
+      "label": "Copilot",
+      "file": ".github/copilot-instructions.md",
+      "title": "GitHub Copilot",
+      "description": "GitHub Copilot custom instructions for the repository."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>14</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Applications\Features\Buildings\Endpoints\DeleteLand\**" />
+    <EmbeddedResource Remove="Applications\Features\Buildings\Endpoints\DeleteLand\**" />
+    <None Remove="Applications\Features\Buildings\Endpoints\DeleteLand\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LowCodeHub.MinimalEndpoints" Version="0.0.6" />
+    <PackageReference Include="LowCodeHub.OpenApi" Version="0.0.2" />
+    <PackageReference Include="LowCodeHub.Permissions" Version="0.0.2" />
+	  <PackageReference Include="LowCodeHub.ObjectMapper" Version="0.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\TerraLink.Domain\TerraLink.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
